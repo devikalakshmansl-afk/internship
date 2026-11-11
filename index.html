@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddhi Gold Diamond Silver</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #fffaf6;
+    color: #493b35;
+}
+
+header {
+    background: #fff;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px #00000010;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #a66b58;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #9a8580;
+    text-align: center;
+    margin-top: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #594942;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #bd8068;
+}
+
+.menu {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 60px 9%;
+    background: linear-gradient(90deg, #fff5ee 35%, #f8e8df 100%);
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero small {
+    color: #b47b66;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    line-height: 1.15;
+    margin: 22px 0;
+    color: #59443c;
+}
+
+.hero p {
+    line-height: 1.8;
+    color: #806e65;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #a96f5b;
+    color: white;
+    padding: 13px 27px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #865544;
+}
+
+.hero-image {
+    width: 48%;
+    margin-left: auto;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 180px 180px 8px 8px;
+}
+
+section {
+    padding: 75px 9%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading small {
+    color: #b47b66;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-top: 12px;
+    color: #59443c;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.collection-card {
+    background: white;
+    text-align: center;
+    padding-bottom: 22px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #0000000c;
+    transition: 0.3s;
+}
+
+.collection-card:hover {
+    transform: translateY(-7px);
+}
+
+.collection-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.collection-card h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    margin: 18px 0 8px;
+}
+
+.collection-card p {
+    color: #9a8580;
+    font-size: 13px;
+}
+
+.about {
+    background: #f7eae3;
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.9;
+    color: #79665d;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px #0000000c;
+}
+
+.product img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-family: Georgia, serif;
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.product button {
+    margin-top: 12px;
+}
+
+.contact {
+    background: #fff3ec;
+    text-align: center;
+}
+
+.contact p {
+    margin: 12px;
+    color: #79665d;
+}
+
+footer {
+    background: #59443c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+    line-height: 2;
+}
+
+@media(max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 5px 10px #00000015;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 12px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin: 35px 0 0;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .collections, .products {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        SIDDHI
+        <span>GOLD • DIAMOND • SILVER</span>
+    </div>
+
+    <nav id="navbar">
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- HOME -->
+<div class="hero" id="home">
+    <div class="hero-content">
+        <small>BEAUTY THAT LASTS FOREVER</small>
+        <h1>Elegance in Every Little Detail.</h1>
+        <p>
+            Discover beautiful gold, diamond and silver jewellery
+            crafted to make every special moment unforgettable.
+        </p>
+        <a href="#collections" class="btn">Explore Collection</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900"
+        alt="Elegant jewellery">
+    </div>
+</div>
+
+<!-- COLLECTIONS -->
+<section id="collections">
+    <div class="section-heading">
+        <small>OUR COLLECTIONS</small>
+        <h2>Find Your Favourite</h2>
+    </div>
+
+    <div class="collections">
+
+        <div class="collection-card">
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=700"
+            alt="Gold jewellery">
+            <h3>Gold Jewellery</h3>
+            <p>Timeless beauty and tradition.</p>
+        </div>
+
+        <div class="collection-card">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=700"
+            alt="Diamond jewellery">
+            <h3>Diamond Jewellery</h3>
+            <p>A little sparkle for every occasion.</p>
+        </div>
+
+        <div class="collection-card">
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=700"
+            alt="Silver jewellery">
+            <h3>Silver Jewellery</h3>
+            <p>Simple, stylish and graceful.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="section-heading">
+        <small>OUR STORY</small>
+        <h2>About Siddhi</h2>
+    </div>
+
+    <p>
+        At SIDDHI GOLD DIAMOND SILVER, we believe jewellery is
+        more than an accessory. It represents love, memories,
+        celebrations and beautiful moments. Explore our collection
+        and find something special for every occasion.
+    </p>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+    <div class="section-heading">
+        <small>HANDPICKED FOR YOU</small>
+        <h2>Popular Jewellery</h2>
+    </div>
+
+    <div class="products">
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=700"
+            alt="Elegant ring">
+            <h3>Elegant Ring</h3>
+            <button class="btn" onclick="enquire('Elegant Ring')">
+                Enquire Now
+            </button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=700"
+            alt="Beautiful earrings">
+            <h3>Classic Earrings</h3>
+            <button class="btn" onclick="enquire('Classic Earrings')">
+                Enquire Now
+            </button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=700"
+            alt="Jewellery necklace">
+            <h3>Designer Necklace</h3>
+            <button class="btn" onclick="enquire('Designer Necklace')">
+                Enquire Now
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="section-heading">
+        <small>WE WOULD LOVE TO HEAR FROM YOU</small>
+        <h2>Visit Our Store</h2>
+    </div>
+
+    <p><strong>SIDDHI GOLD DIAMOND SILVER</strong></p>
+    <p>Kanhangad, Kasaragod, Kerala</p>
+    <p>For enquiries and product details, contact us.</p>
+
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX">
+        Chat on WhatsApp
+    </a>
+</section>
+
+<footer>
+    <h3>SIDDHI GOLD DIAMOND SILVER</h3>
+    <p>Elegance • Beauty • Trust</p>
+    <p>© 2026 Siddhi Gold Diamond Silver. All Rights Reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navbar").classList.toggle("active");
+}
+
+function enquire(productName) {
+    const phone = "91XXXXXXXXXX";
+    const message = "Hello! I am interested in " + productName +
+                    ". Please share more details.";
+    window.open(
+        "https://wa.me/" + phone + "?text=" +
+        encodeURIComponent(message),
+        "_blank"
+    );
+}
+</script>
+
+</body>
+</html>
